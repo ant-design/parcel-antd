@@ -1,0 +1,24 @@
+{
+  "name": "parcel-antd",
+  "version": "1.0.0",
+  "description": "Use antd in parcel",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --no-cache"
+  },
+  "keywords": [],
+  "author": "afc163<afc163@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-import": "^1.6.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "parcel-bundler": "^1.4.1"
+  },
+  "dependencies": {
+    "antd": "^3.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

@@ -20,7 +20,7 @@
     "antd": "^3.1.0",
     "express": "^4.16.2",
     "http-proxy-middleware": "^0.17.4",
-    "less": "^3.0.1",
+    "less": "2.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

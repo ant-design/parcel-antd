@@ -16,5 +16,5 @@ Visit http://localhost:1234
 
 ---
 
-- https://parceljs.org/
-- http://ant.design/
+* https://parceljs.org/
+* http://ant.design/

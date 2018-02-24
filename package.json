@@ -4,7 +4,7 @@
   "description": "Use antd in parcel",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --no-cache"
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "afc163<afc163@gmail.com>",
@@ -14,10 +14,13 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "less": "^2.7.3",
-    "parcel-bundler": "^1.4.1"
+    "parcel-bundler": "^1.6.2"
   },
   "dependencies": {
     "antd": "^3.1.0",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4",
+    "less": "^3.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

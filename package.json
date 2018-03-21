@@ -9,8 +9,7 @@
   "keywords": [],
   "author": "afc163<afc163@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "babel-plugin-import": "^1.6.3",
+  "devDependencies": {    
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "less": "^2.7.3",

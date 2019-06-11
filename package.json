@@ -10,10 +10,11 @@
   "author": "afc163<afc163@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-plugin-import": "^1.6.3",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "less": "^2.7.3",
+    "less": "^3.9.0",
     "parcel-bundler": "^1.4.1"
   },
   "dependencies": {

@@ -4,21 +4,31 @@
   "description": "Use antd in parcel",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --no-cache"
+    "dev": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html"
   },
-  "keywords": [],
+  "keywords": [
+    "Ant Design",
+    "Parcel",
+    "Tsx"
+  ],
   "author": "afc163<afc163@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-plugin-import": "^1.6.3",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "less": "^2.7.3",
-    "parcel-bundler": "^1.4.1"
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "babel-plugin-import": "^1.13.0"
   },
   "dependencies": {
-    "antd": "^3.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "antd": "^3.26.18",
+    "less": "^3.11.3",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.5"
   }
 }

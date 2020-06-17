@@ -1,20 +1,33 @@
-# Ant Design Demo for parcel
+# Ant Design Demo For Parcel
 
-```
+## Include
+
+- React
+- TypeScript
+- Antd
+- Parcel
+- Less
+- Babel7
+
+## Start
+
+```bash
 npm install
-npm start
+npm run dev
+npm run build
 ```
 
 or
 
-```
+```bash
 yarn
-yarn start
+yarn dev
+yarn build
 ```
 
 Visit http://localhost:1234
 
 ---
 
-- https://parceljs.org/
-- http://ant.design/
+- [Parcel](https://parceljs.org/)
+- [Antd](http://ant.design/)

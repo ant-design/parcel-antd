@@ -4,7 +4,7 @@ import Navigation from "../navigation/Navigation";
 export interface BaseLayoutProps {}
 
 const BaseLayout: React.FC<BaseLayoutProps> = (props) => {
-  console.log(props.children)
+  console.log(props.children);
   return (
     <div>
       <div>

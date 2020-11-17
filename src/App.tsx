@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import BaseLayout from "./components/layout/BaseLayout";
-import Demo1 from "./routes/demo1/demo1";
-import Demo2 from "./routes/demo2/demo2";
+import routes from "./routes/routes";
 
 export interface AppProp {}
 
@@ -10,22 +8,39 @@ const App: React.FC<AppProp> = () => {
   return (
     <>
       <BrowserRouter basename="redisprodash">
-        <Switch>
-          <Route
-            path="/"
-            component={() => {
-              return (
-                <BaseLayout>
-                  <Route path="/demo1" component={Demo1}></Route>
-                  <Route path="/demo2" component={Demo2}></Route>
-                </BaseLayout>
-              );
-            }}
-          ></Route>
-        </Switch>
+        <Switch>{recursionRoutes(routes)}</Switch>
       </BrowserRouter>
     </>
   );
+};
+
+const recursionRoutes = (routes: any) => {
+  return routes.map((route: any, index: any) => {
+    if (!route.children) {
+      return (
+        <Route
+          key={index}
+          path={route.path}
+          component={route.component}
+        ></Route>
+      );
+    } else {
+      const Comp = route.component;
+      return (
+        <Route
+          key={index}
+          path={route.path}
+          children={() => {
+            return (
+              <Switch>
+                <Comp>{recursionRoutes(route.children)}</Comp>
+              </Switch>
+            );
+          }}
+        ></Route>
+      );
+    }
+  });
 };
 
 export default App;

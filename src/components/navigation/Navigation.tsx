@@ -12,6 +12,7 @@ const Navigation: React.FC<MenuProp> = () => {
   const [menuState] = useState<MenuState>({ current: "mail" });
   const history = useHistory();
   const handleClick = (e: any) => {
+    menuState.current = e.key;
     history.push(e.key);
   };
   return (

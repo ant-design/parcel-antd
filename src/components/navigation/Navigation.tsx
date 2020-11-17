@@ -1,45 +1,51 @@
 import React, { useState } from "react";
 import { Menu } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
-
+import menus from "../../routes/routes";
 const { SubMenu } = Menu;
 
 export interface MenuProp {}
 export interface MenuState {
   current: string;
 }
-
 const Navigation: React.FC<MenuProp> = () => {
   const [menuState] = useState<MenuState>({ current: "mail" });
   const history = useHistory();
   const handleClick = (e: any) => {
-    console.log(e)
+    history.push(e.key);
   };
   return (
     <Menu
       onClick={handleClick}
       selectedKeys={[menuState.current]}
       mode="horizontal"
+      theme="dark"
     >
-      <Menu.Item key="mail" icon={<MailOutlined />}>
-        Navigation One
-      </Menu.Item>
-      <Menu.Item key="mail1" icon={<AppstoreOutlined />}>
-        Navigation Two
-      </Menu.Item>
-      <Menu.Item key="mail2" icon={<AppstoreOutlined />}>
-        Navigation Two
-      </Menu.Item>
-      <Menu.Item key="mail3" icon={<AppstoreOutlined />}>
-        Navigation Two
-      </Menu.Item>
+      {recursionMenu(menus[0].children)}
     </Menu>
   );
+};
+
+const recursionMenu = (menus: any) => {
+  return menus.map((menu: any) => {
+    if (!menu.children) {
+      return (
+        <Menu.Item key={menu.path} icon={menu.icon ? menu.icon : null}>
+          {menu.title}
+        </Menu.Item>
+      );
+    } else {
+      return (
+        <SubMenu
+          key={menu.path}
+          icon={menu.icon ? menu.icon : null}
+          title={menu.title}
+        >
+          {recursionMenu(menu.children)}
+        </SubMenu>
+      );
+    }
+  });
 };
 
 export default Navigation;

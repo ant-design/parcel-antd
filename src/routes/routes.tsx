@@ -2,7 +2,7 @@
  * @Author: ferried
  * @Email: harlancui@outlook.com
  * @Date: 2020-11-17 16:32:15
- * @LastEditTime: 2020-11-17 17:01:29
+ * @LastEditTime: 2020-11-17 17:57:48
  * @LastEditors: ferried
  * @Description: Basic description
  * @FilePath: /parcel-antd/src/routes/routes.tsx
@@ -18,10 +18,11 @@ export default [
     children: [
       {
         path: "/demo1",
+        title: "测试一",
         component: Demo1,
-        children: [{ path: "/demo1/demo2", component: Demo2 }],
+        children: [{ path: "/demo1/demo2",title:"asd", component: Demo2 }],
       },
-      { path: "/demo2", component: Demo2 },
+      { path: "/demo2", title: "测试二", component: Demo2 },
     ],
   },
 ];

@@ -1,23 +1,29 @@
 import React from "react";
-import { Button } from "antd";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import BaseLayout from "./components/layout/BaseLayout";
+import Demo1 from "./routes/demo1/demo1";
+import Demo2 from "./routes/demo2/demo2";
 
-import "./style/index.less";
+export interface AppProp {}
 
-interface IApp {
-  title: string;
-}
-
-const App: React.FC<IApp> = ({ title }) => {
+const App: React.FC<AppProp> = () => {
   return (
     <>
-      <p className={"foo"}>Hi! {title}</p>
-      <Button type="primary" href={"https://ant.design/index-cn"}>
-        Antd Docs
-      </Button>
-      &nbsp;
-      <Button type="primary" href={"https://parceljs.org/"}>
-        Parcel Docs
-      </Button>
+      <BrowserRouter basename="redisprodash">
+        <Switch>
+          <Route
+            path="/"
+            component={() => {
+              return (
+                <BaseLayout>
+                  <Route path="/demo1" component={Demo1}></Route>
+                  <Route path="/demo2" component={Demo2}></Route>
+                </BaseLayout>
+              );
+            }}
+          ></Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };

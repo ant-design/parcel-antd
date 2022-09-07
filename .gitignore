@@ -1,3 +1,5 @@
 node_modules
 dist
-.cache
+.parcel-cache
+yarn.lock
+pnpm-lock.yaml

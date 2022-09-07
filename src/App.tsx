@@ -1,16 +1,9 @@
-import React from "react";
-import { Button } from "antd";
+import { Button, Menu } from "antd";
 
-import "./style/index.less";
-
-interface IApp {
-  title: string;
-}
-
-const App: React.FC<IApp> = ({ title }) => {
+export default function App() {
   return (
     <>
-      <p className={"foo"}>Hi! {title}</p>
+      <p className={"foo"}>Hi! Ant Design & Parcel.</p>
       <Button type="primary" href={"https://ant.design/index-cn"}>
         Antd Docs
       </Button>
@@ -18,8 +11,13 @@ const App: React.FC<IApp> = ({ title }) => {
       <Button type="primary" href={"https://parceljs.org/"}>
         Parcel Docs
       </Button>
+      <Menu
+        activeKey="1"
+        items={[
+          { key: "1", label: "first" },
+          { key: "2", label: "second" },
+        ]}
+      />
     </>
   );
-};
-
-export default App;
+}

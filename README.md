@@ -7,7 +7,6 @@
 - Antd
 - Parcel
 - Less
-- Babel7
 
 ## Start
 
